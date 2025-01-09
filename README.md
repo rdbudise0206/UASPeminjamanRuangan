@@ -1,4 +1,4 @@
-# TENTANG PROJEK
+# Tentang Projek
 
 Ini Adalah Projek UAS Matakuliah Aplikasi Mobile 
 Pada Universitas Global Institute Tangerang
