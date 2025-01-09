@@ -59,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
       });
     }
   }
-//login par2
+//login part2
   
   @override
   Widget build(BuildContext context) {
