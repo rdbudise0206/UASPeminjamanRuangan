@@ -15,7 +15,7 @@ Anggota kelompok:
 5. Menra (dominikus888)
 6. Nesya (nesya061189)
 7. Rd Budi Sembada Kusumah (rdbudise0206)
-8. Wiharyanto
+8. Wiharyanto (WIHARYANTO)
 9. Yanda (yandasub)
 10. Tino Angga (TinoAngga)
 11. Pratomo (1124160006)
@@ -23,6 +23,6 @@ Anggota kelompok:
 13. Bayu Al-Araaf (masbayy04)
 14. Adi (amarta26)
 15. Dzikri Wahyu Drajat (Dzikriwa)
-16. Firman Gunajaya
+16. Firman Gunajaya (firmangunajaya)
 17. Muhamad Iqbal (muhamadiqball025)
 
