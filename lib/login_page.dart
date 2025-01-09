@@ -61,5 +61,162 @@ class _LoginPageState extends State<LoginPage> {
   }
 //login par2
   
-  https://paste.ofcode.org/wL9YQ43Lw734nw7gpn4MNG
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/login.png'),
+          fit: BoxFit.cover,
+        ),
+      ),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: Stack(
+          children: [
+            // Background Image - Sudah disetting di Container di luar Scaffold
+
+            // Teks di atas Form
+            Positioned(
+              top: 100,
+              left: 35,
+              child: Text(
+                'Silahkan\nLogin',
+                style: TextStyle(color: Colors.white, fontSize: 33),
+              ),
+            ),
+
+            // Logo Global di bawah tulisan "Welcome Back" dan di atas form username
+            Positioned(
+              top: 300, // Posisi logo di bawah "Welcome Back"
+              left: 35, // Posisi logo di pojok kiri
+              child: Image.asset(
+                'assets/logo-global-institute-4.png',  // Gantilah dengan path logo Anda
+                width: 100,  // Menyesuaikan ukuran logo
+                height: 100, // Menyesuaikan ukuran logo
+              ),
+            ),
+
+            // Form Login
+            SingleChildScrollView(
+              child: Container(
+                padding: EdgeInsets.only(
+                    top: MediaQuery.of(context).size.height * 0.5),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(left: 35, right: 35),
+                      child: Column(
+                        children: [
+                          // Username Field
+                          TextField(
+                            controller: usernameController,
+                            style: TextStyle(color: Colors.black),
+                            decoration: InputDecoration(
+                              fillColor: Colors.grey.shade100,
+                              filled: true,
+                              hintText: "Username",
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 30,
+                          ),
+
+                          // Password Field
+                          TextField(
+                            controller: passwordController,
+                            style: TextStyle(),
+                            obscureText: true,
+                            decoration: InputDecoration(
+                              fillColor: Colors.grey.shade100,
+                              filled: true,
+                              hintText: "Password",
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 40,
+                          ),
+
+                          // Remember Me Checkbox
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Remember Me",
+                                style: TextStyle(color: Colors.black),
+                              ),
+                              Checkbox(
+                                value: isChecked,
+                                onChanged: (value) {
+                                  setState(() {
+                                    isChecked = value!;
+                                  });
+                                },
+                              ),
+                            ],
+                          ),
+
+                          // Login Button
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Sign in',
+                                style: TextStyle(
+                                  fontSize: 27,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              CircleAvatar(
+                                radius: 30,
+                                backgroundColor: Color(0xff4c505b),
+                                child: IconButton(
+                                  color: Colors.white,
+                                  onPressed: () {
+                                    login();
+                                  },
+                                  icon: Icon(
+                                    Icons.arrow_forward,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 40,
+                          ),
+                          // Menampilkan pesan error jika login gagal
+                          if (errorMessage.isNotEmpty)
+                            Padding(
+                              padding: const EdgeInsets.only(top: 20),
+                              child: Text(
+                                errorMessage,
+                                style: TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 
