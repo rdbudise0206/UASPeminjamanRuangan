@@ -1,6 +1,6 @@
-# pinjam
+# TENTANG PROJEK
 
-Peminjaman Ruangan
+Ini Adalah Projek UAS Matakuliah Aplikasi Mobile pada Universitas Global Institute Tangerang
 
 ## Getting Started
 
